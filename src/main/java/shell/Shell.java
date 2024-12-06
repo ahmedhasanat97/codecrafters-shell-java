@@ -38,6 +38,7 @@ public class Shell implements Runnable {
                 String commandPath = PathCommandsUtil.findCommandPath(commandName);
                 if (!Objects.isNull(commandPath)) {
                     Process process = new ProcessBuilder(commandName, arguments).start();
+                    continue;
                 }
 
                 System.out.println(commandName + ": not found");
