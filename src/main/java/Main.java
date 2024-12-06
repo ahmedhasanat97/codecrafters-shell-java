@@ -1,3 +1,6 @@
+import commands.Command;
+
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -9,13 +12,22 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
 
-            if ("exit 0".equals(input)) {
-                break;
-            } else if (input.startsWith("echo ")) {
-                System.out.println(input.substring(5));
-            } else {
-                System.out.println(input + ": command not found");
+            String command = input;
+            String arguments = "";
+            int indexOfFirstSpace = input.indexOf(" ");
+            if (indexOfFirstSpace != -1) {
+                command = input.substring(0, indexOfFirstSpace);
+                arguments = input.substring(indexOfFirstSpace + 1);
             }
+
+            Command commandEnum = Command.of(command);
+            if (Objects.isNull(commandEnum)) {
+                System.out.println(command + ": not found");
+                continue;
+            }
+
+            commandEnum.getHandler().handle(arguments);
+
         }
 
     }
