@@ -1,4 +1,4 @@
-package commands;
+package shell.commands;
 
 public interface CommandHandler {
 

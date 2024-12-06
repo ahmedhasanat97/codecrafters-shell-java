@@ -1,8 +1,8 @@
-package commands;
+package shell.commands;
 
-import commands.handlers.EchoHandler;
-import commands.handlers.ExitHandler;
-import commands.handlers.TypeHandler;
+import shell.commands.handlers.EchoHandler;
+import shell.commands.handlers.ExitHandler;
+import shell.commands.handlers.TypeHandler;
 
 import java.util.Arrays;
 import java.util.HashMap;

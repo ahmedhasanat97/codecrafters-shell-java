@@ -1,6 +1,6 @@
-package commands.handlers;
+package shell.commands.handlers;
 
-import commands.CommandHandler;
+import shell.commands.CommandHandler;
 
 public class EchoHandler implements CommandHandler {
 
