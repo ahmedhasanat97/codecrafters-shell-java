@@ -43,6 +43,7 @@ public class CdBuiltInCommandHandler implements BuiltInCommandHandler {
                     if (!arrayDeque.isEmpty()) {
                         arrayDeque.removeLast();
                     }
+                    break;
                 default:
                     arrayDeque.addLast(pathArgument);
             }
