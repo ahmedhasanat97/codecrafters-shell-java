@@ -1,20 +1,20 @@
 package shell.commands.handlers;
 
-import shell.commands.Command;
-import shell.commands.CommandHandler;
+import shell.commands.BuiltInCommand;
+import shell.commands.BuiltInCommandHandler;
 import shell.utils.PathCommandsUtil;
 
 import java.io.IOException;
 import java.util.Objects;
 
-public class TypeHandler implements CommandHandler {
+public class TypeHandlerBuiltIn implements BuiltInCommandHandler {
 
     @Override
     public void handle(String commandName) {
         try {
-            Command command = Command.of(commandName);
-            if (!Objects.isNull(command)) {
-                System.out.println(command.getDescription());
+            BuiltInCommand builtInCommand = BuiltInCommand.of(commandName);
+            if (!Objects.isNull(builtInCommand)) {
+                System.out.println(builtInCommand.getDescription());
                 return;
             }
 
