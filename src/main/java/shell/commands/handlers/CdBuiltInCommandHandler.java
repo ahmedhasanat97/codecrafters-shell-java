@@ -19,6 +19,10 @@ public class CdBuiltInCommandHandler implements BuiltInCommandHandler {
     }
 
     private String getPath(String arguments) {
+        if (("~").equals(arguments)) {
+            return System.getenv("HOME");
+        }
+
         String[] argumentStrings = arguments.split("/");
         if (argumentStrings.length == 0) {
             return "/";
