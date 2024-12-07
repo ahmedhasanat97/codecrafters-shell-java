@@ -41,6 +41,7 @@ public class Shell implements Runnable {
                 if (!Objects.isNull(commandPath)) {
                     String response = runFile(commandName, arguments);
                     System.out.println(response);
+                    continue;
                 }
 
                 System.out.println(commandName + ": not found");
