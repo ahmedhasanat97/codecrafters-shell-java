@@ -2,7 +2,7 @@ package shell.commands.handlers;
 
 import shell.commands.BuiltInCommandHandler;
 
-public class ExitHandlerBuiltIn implements BuiltInCommandHandler {
+public class ExitBuiltInCommandHandler implements BuiltInCommandHandler {
 
     @Override
     public void handle(String statusCode) {

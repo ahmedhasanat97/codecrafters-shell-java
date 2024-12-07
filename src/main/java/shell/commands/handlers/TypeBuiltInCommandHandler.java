@@ -7,7 +7,7 @@ import shell.utils.PathCommandsUtil;
 import java.io.IOException;
 import java.util.Objects;
 
-public class TypeHandlerBuiltIn implements BuiltInCommandHandler {
+public class TypeBuiltInCommandHandler implements BuiltInCommandHandler {
 
     @Override
     public void handle(String commandName) {

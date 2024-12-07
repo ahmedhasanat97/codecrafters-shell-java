@@ -1,9 +1,10 @@
 package shell.commands;
 
-import shell.commands.handlers.EchoHandlerBuiltIn;
-import shell.commands.handlers.ExitHandlerBuiltIn;
-import shell.commands.handlers.PwdHandlerBuiltIn;
-import shell.commands.handlers.TypeHandlerBuiltIn;
+import shell.commands.handlers.CdBuiltInCommandHandler;
+import shell.commands.handlers.EchoBuiltInCommandHandler;
+import shell.commands.handlers.ExitBuiltInCommandHandler;
+import shell.commands.handlers.PwdBuiltInCommandHandler;
+import shell.commands.handlers.TypeBuiltInCommandHandler;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -11,10 +12,11 @@ import java.util.Map;
 
 public enum BuiltInCommand {
 
-    EXIT("exit", "exit is a shell builtin", (args -> new ExitHandlerBuiltIn().handle(args))),
-    ECHO("echo", "echo is a shell builtin", (args -> new EchoHandlerBuiltIn().handle(args))),
-    TYPE("type", "type is a shell builtin", (args -> new TypeHandlerBuiltIn().handle(args))),
-    PWD("pwd", "pwd is a shell builtin", (args -> new PwdHandlerBuiltIn().handle(args)));
+    EXIT("exit", "exit is a shell builtin", (args -> new ExitBuiltInCommandHandler().handle(args))),
+    ECHO("echo", "echo is a shell builtin", (args -> new EchoBuiltInCommandHandler().handle(args))),
+    TYPE("type", "type is a shell builtin", (args -> new TypeBuiltInCommandHandler().handle(args))),
+    PWD("pwd", "pwd is a shell builtin", (args -> new PwdBuiltInCommandHandler().handle(args))),
+    CD("cd", "cd is a shell builtin", (args -> new CdBuiltInCommandHandler().handle(args)));
 
     private final String name;
     private final String description;
